@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 135139951913925560}
   - component: {fileID: 114593050174100902}
   - component: {fileID: 114508676987759904}
-  - component: {fileID: 114830577175801594}
+  - component: {fileID: 114173644000630468}
   m_Layer: 0
   m_Name: Player_Artery
   m_TagString: Untagged
@@ -587,7 +587,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1069572160749900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.012631956, y: 1.3038917, z: 0.03564453}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4475313895289646}
@@ -893,6 +893,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114173644000630468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069572160749900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d0c7928eec65e1428f6f4a0df9e1a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114213609845938194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1480,17 +1491,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Enter text...
---- !u!114 &114830577175801594
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1069572160749900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114848988764157026
 MonoBehaviour:
   m_ObjectHideFlags: 1
