@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 224938087869730138}
   - component: {fileID: 114965116247461926}
   m_Layer: 0
-  m_Name: Slider_UpDown
+  m_Name: Slider_Power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -927,7 +927,18 @@ MonoBehaviour:
   m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114349391561777112}
+        m_MethodName: SliderDirectionLeftRight
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 114213609845938194}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114261350380029230
@@ -1089,12 +1100,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PivotCanon: {fileID: 4934512519674176}
   m_DirectionUpDown: {fileID: 4193950839761764}
-  _horizontalRotation: 0
-  _horizontalRange:
+  m_horizontalFloat: 0
+  m_horizontalRange:
     _min: -180
     _max: 180
-  _verticalRotation: 0
-  _verticalRange:
+  m_verticalFloat: 0
+  m_verticalRange:
     _min: 10
     _max: 88
 --- !u!114 &114419786196645130
