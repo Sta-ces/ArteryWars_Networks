@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Project/_Scenes/Launcher_ArteryWars.unity
+    guid: 90b6fedbd1645ff4eb432abfaac590f0
+  - enabled: 1
+    path: Assets/_Project/_Scenes/Online_ArteryWars.unity
+    guid: 6bfd6412dafafd149b7a4e064f34d094
+  - enabled: 1
+    path: Assets/_Project/_Scenes/Offline_ArteryWars.unity
+    guid: 490bfb73d8269fe4793ccd059f023c75
