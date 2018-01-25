@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 
@@ -9,11 +7,7 @@ public class PlayerDirectionTarget : NetworkBehaviour {
     public Transform m_PivotCanon;
     public Transform m_DirectionUpDown;
 
-    [SyncVar]
-    public float m_horizontalFloat;
     public Range m_horizontalRange = new Range(-180, 180);
-    [SyncVar]
-    public float m_verticalFloat;
     public Range m_verticalRange = new Range(10, 88);
 
 
@@ -34,7 +28,6 @@ public class PlayerDirectionTarget : NetworkBehaviour {
     }
 
 
-
     [Command]
     private void Cmd_SliderDirection(float _value)
     {
@@ -46,4 +39,10 @@ public class PlayerDirectionTarget : NetworkBehaviour {
     {
         m_horizontalFloat = m_horizontalRange.GetValue(_value);
     }
+
+
+    [SyncVar]
+    private float m_horizontalFloat;
+    [SyncVar]
+    private float m_verticalFloat;
 }

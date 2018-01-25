@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114508676987759904}
   - component: {fileID: 114173644000630468}
   - component: {fileID: 114349391561777112}
+  - component: {fileID: 114785116309607056}
   m_Layer: 0
   m_Name: Player_Artery
   m_TagString: Untagged
@@ -1100,11 +1101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PivotCanon: {fileID: 4934512519674176}
   m_DirectionUpDown: {fileID: 4193950839761764}
-  m_horizontalFloat: 0
   m_horizontalRange:
     _min: -180
     _max: 180
-  m_verticalFloat: 0
   m_verticalRange:
     _min: 10
     _max: 88
@@ -1312,7 +1311,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114750309782278152}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114785116309607056}
+        m_MethodName: Fire
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 114965116247461926}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114730808383193804
@@ -1408,6 +1418,23 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114785116309607056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069572160749900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53c93c3c6b08d9478322b7012a40aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BulletPrefabs: {fileID: 1150494901545872, guid: 8257541873d08d142b2a23946566663c,
+    type: 2}
+  m_FirePoint: {fileID: 4703947522939078}
+  m_SecondToDestroy: 5
+  m_minForce: 4
+  m_maxForce: 20
 --- !u!114 &114787511794338744
 MonoBehaviour:
   m_ObjectHideFlags: 1
