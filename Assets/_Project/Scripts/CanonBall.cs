@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CanonBall : MonoBehaviour {
+public class CanonBall : MonoBehaviour
+{
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -11,7 +10,7 @@ public class CanonBall : MonoBehaviour {
         if (playerInfo != null)
         {
             Debug.Log("BOOM! You kill " + playerInfo._pseudo);
-            Destroy(collision.gameObject);
+            //collision.gameObject.GetComponent<PlayerPositionSpawn>().CmdSpawnPlayerAtPoint();
         }
 
         Destroy(gameObject);
