@@ -5,19 +5,16 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 
 public class PlayerDirectionTarget : NetworkBehaviour {
-
+    
     public Transform m_PivotCanon;
     public Transform m_DirectionUpDown;
 
     [SyncVar]
-    [Range(0, 1)]
-    public float _horizontalRotation;
-    public Range _horizontalRange = new Range(-180, 180);
-
+    public float m_horizontalFloat;
+    public Range m_horizontalRange = new Range(-180, 180);
     [SyncVar]
-    [Range(0, 1)]
-    public float _verticalRotation;
-    public Range _verticalRange = new Range(10, 88);
+    public float m_verticalFloat;
+    public Range m_verticalRange = new Range(10, 88);
 
     [System.Serializable]
     public class Range
@@ -35,6 +32,11 @@ public class PlayerDirectionTarget : NetworkBehaviour {
         }
     }
 
+    private void Update()
+    {
+        m_PivotCanon.rotation = Quaternion.Euler(new Vector3(-m_verticalFloat, 0f, 0f));
+    }
+
     public void SliderDirectionUpDown(Slider _slider)
     {
         Cmd_SliderDirection(_slider.value);
@@ -43,7 +45,7 @@ public class PlayerDirectionTarget : NetworkBehaviour {
     [Command]
     private void Cmd_SliderDirection(float _value)
     {
-        m_PivotCanon.rotation = Quaternion.Euler(new Vector3(-_verticalRange.GetValue(_value),0f,0f));
+        m_verticalFloat = m_verticalRange.GetValue(_value);
     }
 
 }
